@@ -18,8 +18,12 @@ public class Main {
         PayrollPerMonth payrollPerMonth = new PayrollPerMonth(woker1, woker2, woker3);
         System.out.println(payrollPerMonth);
         payrollPerMonth.addWorkers(woker4);
-        System.out.println("");
+        System.out.println("----------------\n");
         System.out.println(payrollPerMonth);
+        Collections.sort(payrollPerMonth.getArrWorkers(), Aworker.nameComparator);
+        System.out.println(payrollPerMonth);
+
+        PayrollPerMonth payrollPerMonth1 = payrollPerMonth.sort(Aworker.nameComparator);
 
     }
 

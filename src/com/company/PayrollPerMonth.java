@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -26,6 +28,19 @@ public class PayrollPerMonth {
             payroll(aworker);
         }
 
+    }
+
+    public ArrayList<Aworker> getArrWorkers() {
+        return arrWorkers;
+    }
+
+    public PayrollPerMonth sort(Comparator sorter)
+    {
+        PayrollPerMonth temp = new PayrollPerMonth();
+        temp.arrWorkers.addAll(this.arrWorkers);
+        Collections.sort(temp.getArrWorkers(), sorter);
+
+        return  temp;
     }
 
     private int CheckingTheHoursWorked(int time) {

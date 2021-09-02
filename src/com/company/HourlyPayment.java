@@ -15,4 +15,9 @@ public class HourlyPayment extends Aworker{
         return payment;
     }
 
+
+    @Override
+    public int compareTo(Aworker o) {
+        return 0;
+    }
 }

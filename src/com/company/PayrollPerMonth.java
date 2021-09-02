@@ -1,8 +1,8 @@
 package com.company;
 
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.List;
+
 
 public class PayrollPerMonth {
     private ArrayList<Aworker> arrWorkers;
@@ -55,5 +55,6 @@ public class PayrollPerMonth {
                 "\n arrWorkers=" + arrWorkers +
                 '}';
     }
-public static Comparator <Aworker> sortByName = Comparator.comparing(Aworker::getName);
+
+
 }

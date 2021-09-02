@@ -1,6 +1,9 @@
 package com.company;
 
-abstract class Aworker implements IWorker{
+import java.util.Collections;
+import java.util.Comparator;
+
+abstract class Aworker implements IWorker,Comparable<Aworker>{
     int iD;
     int pay;
     String name;
@@ -46,4 +49,11 @@ abstract class Aworker implements IWorker{
         this.name = name;
     }
 
+
+
+    public static Comparator<Aworker> nameComparator  = new Comparator<Aworker>() {
+        public int compare(Aworker one, Aworker other) {
+            return one.name.compareTo(other.name);
+        }
+    };
 }
